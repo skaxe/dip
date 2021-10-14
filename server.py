@@ -1,16 +1,16 @@
 from flask import Flask, render_template
 
 
-from random_predictor import Random_predictor
+from random_predictor import RandomPredictor
 app = Flask(__name__)
+
+random_predict = RandomPredictor()
 
 @app.route("/")
 def index():
 
-    title = 'Случайное число'
-    lol = 0.124124124
-    
-    return_number = str(Random_predictor.predict(5))
-    return render_template('index.html',page_title = title, return_number = return_number)
-if __name__=="__main__":
+    return_number = str(random_predict.predict())
+    print(return_number)
+    return render_template('index.html', return_number=return_number)
+if __name__ == "__main__":
     app.run()

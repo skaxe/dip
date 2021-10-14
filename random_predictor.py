@@ -1,12 +1,10 @@
 import random
-import base_predictor
+from base_predictor import BasePredictor 
 
 
-class Random_predictor(base_predictor.Predictor):    
+class RandomPredictor(BasePredictor):
 
     def predict(self):
-        number = random.random()
+        number = random.random() 
         return number
-    a = predict(5)
-    print(a)
-    
+

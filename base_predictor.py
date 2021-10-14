@@ -1,4 +1,4 @@
-class Predictor:
+class BasePredictor:
 
-    def predict(self,*args):#это методы
+    def base_predictor(self, *args, **kwargs):
         raise NotImplementedError

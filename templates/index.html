@@ -3,7 +3,7 @@
 <htmllang="ru">
     <head>
         <meta charset = 'utf-8'>
-        <title>{{page_title}}</title>
+        <title>Абвгд</title>
     </head>
     <body>
         <h1>
@@ -12,3 +12,16 @@
         <p><input type="button" onclick= "alert()" value="Показать случайное число"></p>
     </body>
 </html>
+
+<script>
+    window.onload = init;
+    
+    function init(){
+        var button = document.getElementById("addButton")
+        button.onclick = handleButtonClick;
+    }
+    
+    function handleButtonClick() {
+        alert("Вы нажали на кнопку");
+    }
+</script>
