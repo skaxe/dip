@@ -11,6 +11,7 @@ def index():
 
     return_number = str(random_predict.predict())
     print(return_number)
-    return render_template('index.html', return_number=return_number)
+    team_list = ['Team1', 'Team2', 'Team3', 'Team4']
+    return render_template('index.html', return_number=return_number, team_list = team_list)
 if __name__ == "__main__":
     app.run()
