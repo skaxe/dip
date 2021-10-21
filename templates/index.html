@@ -1,61 +1,68 @@
+
 <!doctype html>
+<script>
+var select, value, text;
+function change() {
+    select = document.getElementById("selectId"); // Выбираем  select по id
+    value = select.options[select.selectedIndex].value; // Значение value для выбранного option
+    text = select.options[select.selectedIndex].text; // Текстовое значение для выбранного option
+    alert("Value: " + value + "\nТекст: " + text); // Вывод алерта для проверки значений
+}
+</script>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<htmllang="ru">
-    <head>
-        <meta charset = 'utf-8'>
-        <title>Абвгд</title>
-        <script>
-          
-            function dataSelect(select) {
-              select_team = select.team1.selectedIndex
-              
-              if(select_team) alert("Выбрана команда : " + select.team1.options[select_team].value +" и "+ select.team2.options[select_team].value+" и "+ select.aaa.options[select_team].value)
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-              // +" и "+ select.aaa.options[select_team].value)
-              
-
-
-            }
-        </script>
-    </head>
-    <body>
-        <form action = "handler.php">
-            <h1>
-                Ваше случайное число {{return_number}}            
-            </h1>
-            <select name="team1">
-                <option>Выберите команду</option>
-                {% for team_list in team_list %}
-                    <option>{{team_list}}</option>
-                {% endfor %} 
-                []           
-            </select>            
-            <select name="team2">
-                {% for team_list in team_list %}
-                    <option>{{team_list}}</option>
-                {% endfor %}            
-            </select>
+    <title>{{ page_title }}</title>
+  </head>
+  <body>
+    <div class="container">
+    <h1><center>{{ page_title }}</center></h1>      
+    <div class="row">
+        <div class="col-4">
+            <form action="", method="post">
+                {{ form.hidden_tag() }}
+               <div id = 'selectId"'>                    
+                    {{ form.team_select1.label }}<br>
+                    {{ form.team_select1() }}
+                    
+               </div>
+            </form>
             
-            <select name="aaa">
-                <!-- как достать return_number не используя списк, причем при неиспользовании в цикле оно пропадает? -->
-                {% for team_list in team_list %}
-                    <option>{{return_number}}</option>
-                {% endfor %}                            
-            </select>            
-            <p><input type="button" onclick=dataSelect(this.form) value="Показать случайное число"></p>
-        </form>            
-    </body>
-</html>
+        </div>
+        <div class="col-4">
+            <form action="{{ url_for('predict_page') }}", method="post"><!-- Кнопка -->
+                {{ form.hidden_tag() }}
+                <br>
+                <br>
+               <center>{{ form.submit }}</center>
+            </form>
+        </div>
+        <div class="col-4">
+            <form action="", method="post">
+                {{ form.hidden_tag() }}
+               <div>                    
+                    {{ form.team_select2.label }}<br>
+                    {{ form.team_select2() }}
+                    
+               </div>
+            </form>
+        </div>
+        
 
-<!-- <script>
-    window.onload = init;
-    
-    function init(){
-        var button = document.getElementById("addButton")
-        button.onclick = handleButtonClick;
-    }
-    
-    function handleButtonClick() {
-        alert("Вы нажали на кнопку");
-    }
-</script> -->
+    </div>
+    </div>
+   
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
