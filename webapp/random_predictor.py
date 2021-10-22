@@ -1,5 +1,5 @@
 import random
-from base_predictor import BasePredictor 
+from webapp.base_predictor import BasePredictor 
 
 
 class RandomPredictor(BasePredictor):

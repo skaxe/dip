@@ -4,12 +4,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 
 db = SQLAlchemy()
-#типо база данных
+#типо база данных не подключается может проблема в этом
 
 class Team():
-    team_list = ['Team1', 'Team2', 'Team3', 'Team4']
-    team_list ={'name': 'Team1' ,
-    'name': 'Team1' }
     id = db.Column(db.Integer, primary_key=True)
     team_name = db.Column(db.String, nullable=False)
 def __repr__(self):
