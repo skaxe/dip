@@ -2,152 +2,43 @@ html {
 	font-size: 16px;
 }
 
+h1 {
+    top: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    font-weight: 40;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	color: #000;
-	background-color: #eaf5f1;
+	background-color: #ffffff;
 	/* background-color: #a2d9c6; */
 	min-width: 320px;
 	bottom: 200px;
 }
-.headermain {
-	position: fixed;
-	font-family: 'Roboto', sans-serif;
-	background-color: #2c943d;
-	
-	position: relative;
-	
-	font-size: 32px;
-}
 
-.fixedContainer.fixed {
-	z-index: 9999;
-    position: fixed;
-	background-color: #eaf5f1;
-	/* background-color: #2c943d;	 */
-	overflow: hidden;
-	top: 0;
-	left: 0;
-	width: 100%;
-	/* border-top: 1px solid #3d195b; */
-	border-bottom: 3px solid #3d195b;
-	height: 90px;
-}
-.fixedContainer {
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-
-.tophead{
-	display: flex;
-	float:left;
-	height: 80px;
-}
-.navbar.navbar-expand-lg{
-	top: 18px;
-}
-.nav-link{
-	
-	color: #3d195b;
-
-}
-
-
-img {
-
-	max-width: 100%;
-	height: auto;
-}
-
-/* Carousel */
-.my-carousel {
-	
-	z-index: 0; /* The fixed navbar has a z-index of 10 */
-	
-	padding: 0;
-}
-
-.my-carousel .carousel-item {
-	display: flex;
-	max-height: 500px;
-}
-
-.my-carousel .carousel-item img {
-	object-fit: cover;
-}
-/* Carousel */
-
-.sticky {
-    position: sticky;
-    top: 120px;	
-	
-}
-.left {
-	display: flex;
-	float:left;
-	min-height: 260px;
-	min-width: 196px;
-	align-items: center;
-   	justify-content: center;
-	
-}
-.right {
-	display: flex;
-	float:right;
-	min-height: 260px;
-	min-width: 196px;
-	align-items: center;
-   	justify-content: center;
-	
-}
-.footer{
+footer{
 	position: absolute;
 	z-index: 99999;
 	bottom: 200px; 
 }
 
-#top-link{
+.container {
+    font-weight: 40;
+    
+}
 
-
+img {
 	
-	z-index: 0;
-	width: 196px;
-	cursor:pointer; /* изменяем указатель мыши при наведении на блок */
-	display:none; /* скрываем блок с кнопкой, т.к. отображать надо только при прокрутке */
-	position:fixed; /* фиксируем расположение */
-	left:0px;
-	top:0px;
-	padding:0;
-	display: none;
-	bottom: 200px; 
-	transition: background .2s ease;
+	max-width: 450px;
+	height: auto;
 }
-.topped
-{
-	font-family: 'Roboto', sans-serif;
-	font-size: 13px;
-    text-align: center;
-	font-weight: 40;
-	padding: 15px;
-	text-decoration: none; 	
-	color: rgba(59,	18, 91, 0.2);
-	top: 466px;
-	
-	min-width: 32px;
-}
-#top-link:hover{
-	bottom: 200px; 
-	opacity: 0.4;
-  	transition: 0.35s;
-	background-color: #9bccbb;
-}
-#top-link a{
-	z-index: 0;
-	width: 196px;
-	display:block;
-	bottom: 200px; 
-}
+.main_img img{
+	position: absolute;
+	left: 200px;
+	display: flex;
+	float:right;
+}	

@@ -3,9 +3,7 @@
   <head>
 
     <link rel="stylesheet" href="https://www.cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> 
-    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" >
+    <link href="{{ url_for('static', filename='css/predict_main.css') }}" rel="stylesheet" >
     
     
     <title>{{ page_title }}</title>
@@ -42,12 +40,7 @@
                   <li class="nav-item">                    
                     <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
+                  
                   <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Dropdown link
@@ -89,12 +82,12 @@
           <section class="sticky">
             
             
-            <p class="left">
+            <div class="left">
               
               <img src="{{ url_for('static', filename=team1_pic) }}" class="d-block w-100" alt="..." height="87px" width="100px">
-            </p>            
-              Шанс победы {{team1}}:
-              {{ return_number }}            
+            </div>            
+              <!-- {{team1}}: -->
+                      
           </section>                    
         </div>
         <div class="col-8">
@@ -111,13 +104,19 @@
               </div> --> <!-- Для полосок внизу -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="{{ url_for('static', filename='images/1.jpg') }}" class="d-block w-100" alt="...">
+                  <img src="{{ url_for('static', filename='images/1.svg') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="{{ url_for('static', filename='images/2.jpg') }}" class="d-block w-100" alt="...">
+                  <img src="{{ url_for('static', filename='images/2.svg') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="{{ url_for('static', filename='images/3.jpg') }}" class="d-block w-100" alt="...">
+                  <img src="{{ url_for('static', filename='images/3.svg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename='images/4.svg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename='images/5.svg') }}" class="d-block w-100" alt="...">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -133,16 +132,16 @@
 
           <br>
 
-          <img src="{{ url_for('static', filename='images/Graf1.jpg') }}" class="d-block w-100" alt="...">
+          <img src="{{ url_for('static', filename='images/Graf1.svg') }}" class="d-block w-100" alt="...">
           <br>
 
-          <img src="{{ url_for('static', filename='images/Graf2.jpg') }}" class="d-block w-100" alt="...">
+          <img src="{{ url_for('static', filename='images/Graf2.svg') }}" class="d-block w-100" alt="...">
           <br>
-          <img src="{{ url_for('static', filename='images/Graf3.jpg') }}" class="d-block w-100" alt="...">
+          <img src="{{ url_for('static', filename='images/Graf3.svg') }}" class="d-block w-100" alt="...">
           <br>
-          <img src="{{ url_for('static', filename='images/Graf4.jpg') }}" class="d-block w-100" alt="...">
+          <img src="{{ url_for('static', filename='images/Graf4.svg') }}" class="d-block w-100" alt="...">
           <br>
-          <img src="{{ url_for('static', filename='images/Graf5.jpg') }}" class="d-block w-100" alt="...">
+          <img src="{{ url_for('static', filename='images/Graf5.svg') }}" class="d-block w-100" alt="...">
 
           
           
@@ -157,8 +156,8 @@
               <!-- </div> -->
             </div>
             
-              Шанс победы {{team2}}:
-              {{ (1 - return_number) }}  
+              <!-- {{team2}}: -->
+             
             
                    
           </section>
@@ -240,6 +239,6 @@
 <footer>
     
        
-    <img src="{{ url_for('static', filename='images/footer.jpg') }}" class="d-block w-100" alt="...">
+    <!-- <img src="{{ url_for('static', filename='images/footer.svg') }}" class="d-block w-100" alt="..."> -->
 </footer>
 </html>
